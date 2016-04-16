@@ -1,10 +1,10 @@
 class LoginsController < ApplicationController
 before_action :authenticate!, only: [:check_auth]
 
-  def login
+  def create
     @user = User.find_by!(email: params["email"])
     if @user.authenticate(params["password"])
-      render json: { @user.as_json(only: [:email, :access_token]) },
+      render json: { user: @user.as_json(only: [:email]) },
              status: :ok
     else
       render json: { message: "Email or password could not be found." },

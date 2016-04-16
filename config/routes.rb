@@ -5,10 +5,13 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 
-  resources: :registrations, only: [:create]
+  resources :registrations, only: [:create]
+
+  resources :logins, only: [:create]
+
 
   # post "/registrations", to: "registrations#create"
-  
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
