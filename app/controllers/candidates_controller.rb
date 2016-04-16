@@ -14,7 +14,9 @@ class CandidatesController < ApplicationController
   def cand_params
     params.permit(:name, :party)
   end
+
   def index
     @candidates = Candidate.all
     render "index.json.jbuilder", status: :ok
+  end
 end
