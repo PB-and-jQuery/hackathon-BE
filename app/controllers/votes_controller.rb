@@ -8,6 +8,7 @@ class VotesController < ApplicationController
       flash[:notice] = "Thanks for doing your civic duty"
     else
       flash[:notice] = "Errors making vote"
+    end
   end
 
   def index
