@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :registrations, only: [:create]
 
   resources :logins, only: [:create]
+  resources :candidates, only: [:create]
 
 
   # post "/registrations", to: "registrations#create"
