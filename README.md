@@ -15,7 +15,7 @@ Params:
   * password: string
   * voter_id: integer
   * auth_token: string
-  
+
 Returns 201 Created on Success and 422 Unprocessable Entity in case of failure.
 
 **Request:**
@@ -46,5 +46,40 @@ Returns 201 Created on Success and 422 Unprocessable Entity in case of failure.
 ```
 
 
-
 A simple voting application! :)
+
+#### POST /logins
+
+*This route is signs in users.*
+
+POST https://young-gorge-64909.herokuapp.com/logins
+
+Params:
+  * email: string
+  * password: string
+
+Returns 201 Created on Success and 422 Unprocessable Entity in case of failure.
+
+**Request:**
+
+```
+{
+
+  "email": "joe@email.com",
+  "password": "password"
+
+}
+```
+
+**Response:**
+
+```
+{
+  "user": {
+    
+    "email": "joe@email.com",
+    "voter_id": "123456"
+    "auth_token": "f5cbaa437d4eaed621afd81496501d39"
+  }
+}
+```
