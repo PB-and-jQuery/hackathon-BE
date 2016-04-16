@@ -76,10 +76,28 @@ Returns 201 Created on Success and 422 Unprocessable Entity in case of failure.
 ```
 {
   "user": {
-    
+
     "email": "joe@email.com",
     "voter_id": "123456"
     "auth_token": "f5cbaa437d4eaed621afd81496501d39"
+  }
+}
+```
+#### GET /candidates
+
+*This route retrieves candidate data.*
+
+GET https://young-gorge-64909.herokuapp.com/candidate
+
+
+**Response:**
+
+```
+{
+  "candidate": {
+
+    "name": "Lindsey Owens",
+    "party": "Independent"
   }
 }
 ```
