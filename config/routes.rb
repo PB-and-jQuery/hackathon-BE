@@ -8,7 +8,9 @@ Rails.application.routes.draw do
   resources :registrations, only: [:create]
 
   resources :logins, only: [:create]
-  resources :candidates
+  resources :candidates do
+    resources :votes, only: [:create]  
+  end
 
 
   # post "/registrations", to: "registrations#create"
