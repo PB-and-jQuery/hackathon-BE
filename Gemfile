@@ -13,7 +13,10 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
+# Use rack-cors for communication between front end and back end
 gem "rack-cors", require: "rack/cors"
+#use fabricate to format faker
+gem "fabrication"
 
 
 # Use jquery as the JavaScript library
