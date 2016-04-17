@@ -4,10 +4,11 @@ require "json"
 
 class Client
   include HTTParty
+  base_uri "localhost:3000"
 
   def vote(auth_token)
   	# user = User.all
-  	candidate_id = rand(16..18)
+  	candidate_id = rand(1..5)
     Client.post("/candidates/#{candidate_id}/votes", query: {
    	# user_id: rand(1..515),
     	vote: 1
