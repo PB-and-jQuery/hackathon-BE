@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
 	has_secure_password
 	validates_presence_of :password, :email
+  validates :voter_id, length: { is: 6 }
 	validates :password, length: { minimum: 8 }
   validates :email, presence: true, uniqueness: true,
     format: {
