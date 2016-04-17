@@ -4,11 +4,11 @@ require "json"
 
 class Client
   include HTTParty
-  base_uri "localhost:3000"
+  base_uri "https://young-gorge-64909.herokuapp.com"
 
   def vote(auth_token)
   	# user = User.all
-  	candidate_id = rand(1..5)
+  	candidate_id = rand(16..18)
     Client.post("/candidates/#{candidate_id}/votes", query: {
    	# user_id: rand(1..515),
     	vote: 1

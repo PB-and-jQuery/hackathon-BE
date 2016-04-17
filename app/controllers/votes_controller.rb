@@ -1,9 +1,9 @@
 class VotesController < ApplicationController
-  before_action :authenticate!, execpt: [:index]
+  # before_action :authenticate!, execpt: [:index]
 
   def create
     @vote = Vote.new(candidate_id: params[:candidate_id],
-                     user_id: current_user.id,
+                     # user_id: current_user.id,
                      vote: params[:vote])
     if @vote.save
       render json: { message: "Thanks for voting" },
