@@ -10,11 +10,10 @@
 Fabricator(:user) do
   first_name { Faker::Name.first_name }
   last_name { Faker::Name.last_name }
-  email { Faker::Email.email }
+  email { Faker::Internet.email }
   voter_id { Faker::Number.number(6) }
-  auth_token { Faker::Crypto.sha1 }
-  password { "testtest" }
-  password_confirmation { |attrs| attrs[:password] }
+  password_digest { Faker::Internet.password(9) }
+  auth_token { User.generate_token }
 end
 
 5.times { Fabricate(:user) }
