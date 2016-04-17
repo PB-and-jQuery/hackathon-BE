@@ -12,8 +12,11 @@ Fabricator(:user) do
   last_name { Faker::Name.last_name }
   email { Faker::Internet.email }
   voter_id { Faker::Number.number(6) }
-  password_digest { Faker::Internet.password(9) }
+  password { "cookiemonster" }
   auth_token { User.generate_token }
 end
 
-5.times { Fabricate(:user) }
+500.times { Fabricate(:user) }
+
+
+
