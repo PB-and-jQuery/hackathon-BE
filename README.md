@@ -87,7 +87,7 @@ Returns 201 Created on Success and 422 Unprocessable Entity in case of failure.
 
 *This route retrieves candidate data.*
 
-GET https://young-gorge-64909.herokuapp.com/candidate
+GET https://young-gorge-64909.herokuapp.com/candidates
 
 
 **Response:**

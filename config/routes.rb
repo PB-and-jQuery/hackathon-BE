@@ -8,8 +8,8 @@ Rails.application.routes.draw do
   resources :registrations, only: [:create]
 
   resources :logins, only: [:create]
-  resources :candidates do
-    resources :votes, only: [:create]  
+  resources :candidates, only: [:index, :create] do
+    resources :votes, only: [:create]
   end
 
 
