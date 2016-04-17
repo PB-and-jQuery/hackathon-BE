@@ -16,6 +16,9 @@ gem 'coffee-rails', '~> 4.1.0'
 # Use rack-cors for communication between front end and back end
 gem "rack-cors", require: "rack/cors"
 #use fabricate to format faker
+
+gem "faker"
+
 gem "fabrication"
 
 
