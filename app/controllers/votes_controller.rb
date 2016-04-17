@@ -9,7 +9,7 @@ class VotesController < ApplicationController
       render json: { message: "Thanks for voting" },
       status: :created
     else
-      render json: { errors: @user.errors.full_messages },
+      render json: { errors: @vote.errors.full_messages },
       status: :unprocessable_entity
     end
   end
