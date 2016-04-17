@@ -1,14 +1,14 @@
 class User < ActiveRecord::Base
 	has_secure_password
-	# validates_presence_of :password, :email
- #  validates :voter_id, length: { is: 6 }
-	# validates :password, length: { minimum: 8 }
- #  validates :email, presence: true, uniqueness: true,
- #    format: {
- #      with: /.+\@.+\..+/,
- #      message: "must have an @ symbol and period"
- #    }
- #  validates :auth_token, presence: true
+	validates_presence_of :password, :email
+  validates :voter_id, length: { is: 6 }
+	validates :password, length: { minimum: 8 }
+  validates :email, presence: true, uniqueness: true,
+    format: {
+      with: /.+\@.+\..+/,
+      message: "must have an @ symbol and period"
+    }
+  validates :auth_token, presence: true
   
   def ensure_auth_token
     unless self.auth_token
