@@ -9,12 +9,7 @@ Rails.application.routes.draw do
 
   resources :logins, only: [:create]
   resources :candidates, only: [:index, :create] do
-<<<<<<< HEAD
     resources :votes, only: [:create]
-=======
-    resources :votes, only: [:create]  
->>>>>>> 0d4f81885d50c0ef7ba04f1d39de3187fb643da8
-  end
 
 
   # post "/registrations", to: "registrations#create"
