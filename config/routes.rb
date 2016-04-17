@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources :logins, only: [:create]
   resources :candidates, only: [:index, :create] do
     resources :votes, only: [:create]
+  end
 
 
   # post "/registrations", to: "registrations#create"
