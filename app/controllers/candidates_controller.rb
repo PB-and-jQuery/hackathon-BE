@@ -17,6 +17,7 @@ class CandidatesController < ApplicationController
 
   def index
     @candidates = Candidate.all
+    binding.pry
     render "index.json.jbuilder", status: :ok
   end
 end
