@@ -96,8 +96,66 @@ GET https://young-gorge-64909.herokuapp.com/candidates
 {
   "candidate": {
 
+    "id": 18,
     "name": "Lindsey Owens",
-    "party": "Independent"
+    "party": "Independent",
+    "votes": 0
   }
+}
+```
+
+#### POST /candidates
+
+*This route allows you to create your candidates*
+
+POST https://young-gorge-64909.herokuapp.com/candidates
+
+**Request:**
+
+```
+{
+
+  "name": "Lindsey Owens",
+  "party": "Independent"
+
+}
+```
+
+**Response:**
+
+```
+{
+  "candidate": {
+
+    "id": "18",
+    "name": "Lindsey Owens",
+    "party": "Independent",
+    "vote": 100
+  }
+}
+```
+
+#### POST /candidates/:candidate_id/votes
+
+*This route allows you to vote for your candidate*
+
+POST https://young-gorge-64909.herokuapp.com/candidates/18/votes
+
+**Request:**
+
+```
+{
+  "candidate_id": 18,
+  "user_id": 1,
+  "vote": 1
+
+}
+```
+
+**Response:**
+
+```
+{
+  "Thanks for voting"
 }
 ```
