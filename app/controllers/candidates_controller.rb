@@ -17,10 +17,6 @@ class CandidatesController < ApplicationController
 
   def index
     @candidates = Candidate.all
-<<<<<<< HEAD
-
-=======
->>>>>>> 371b79ef2f72d29dc38fb6194f8de290626e041c
     render "index.json.jbuilder", status: :ok
   end
 end

@@ -2,13 +2,13 @@ class VotesController < ApplicationController
   before_action :authenticate!, execpt: [:index]
 
   def create
-    @vote = Vote.new(candidate_id: params[:candidate_id],
-                                    user_id: params[:user_id],
-                                    vote: params[:vote])
+    @vote = current_user.votes.new(candidate_id: params[:candidate_id],
+                                  vote: params[:vote])
     if @vote.save
-      flash[:notice] = "Thanks for doing your civic duty"
+      status: :created
     else
-      flash[:notice] = "Errors making vote"
+      render json: { errors: @user.errors.full_messages },
+      status: :unprocessable_entity
     end
   end
 
